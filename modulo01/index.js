@@ -8,11 +8,6 @@ server.use(express.json());
 //Route params = /users/1
 //Request body = { "name": "Thiago", "email": "thiagopdalladea@gmail.com" }
 
-//CRUD: Create, Read, Update, Delete
-
-//req ==> representa todos os dados da requisição
-//res ==> representa todas as informações que é preciso para retornar uma resposta para o front-end
-
 const users = ['Thiago', 'Renato', 'Janice'];
 
 function CheckUserBody (req, res, next) {
@@ -45,7 +40,7 @@ server.get('/users', (req, res) => {
 
 //adiciona um usuário
 server.post('/users', CheckUserBody, (req, res) => {
-  
+
   users.push(req.user);
 
   return res.json(users);
