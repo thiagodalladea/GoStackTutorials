@@ -1,0 +1,16 @@
+yarn init -y
+
+yarn add express
+
+yarn add nodemon -D
+
+	"scripts": {
+    "dev": "nodemon index.js"
+  },
+
+	"devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+
+yarn dev
+
